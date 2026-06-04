@@ -3,225 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wonderlands | Fabric MMORPG Modpack</title>
+    <title>Wonderlands | Fabric MMORPG Modpack 1.21.1</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Animated Minecraft-style background -->
-    <div class="minecraft-bg">
-        <div class="grass-layer"></div>
-        <div class="dirt-layer"></div>
-        <div class="block-overlay"></div>
-    </div>
-
-    <!-- Main game interface container -->
-    <div class="game-container">
-        <!-- Top navigation bar (like inventory slots) -->
-        <div class="nav-bar">
-            <div class="nav-slot active" data-page="home">🏠 HOME</div>
-            <div class="nav-slot" data-page="features">⚔️ FEATURES</div>
-            <div class="nav-slot" data-page="downloads">📦 DOWNLOADS</div>
-            <div class="nav-slot" data-page="wiki">📖 WIKI</div>
-            <div class="nav-slot" data-page="community">💬 COMMUNITY</div>
+    <!-- Minecraft-style background -->
+    <div class="bg"></div>
+    
+    <!-- Fixed header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">⚔️</span>
+                <span class="logo-text">WONDERLANDS</span>
+            </div>
+            <nav class="nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#dungeons" class="nav-link">Dungeons</a>
+                <a href="#install" class="nav-link">Install</a>
+                <a href="https://github.com/fabric-wonderlands" class="nav-link" target="_blank">GitHub</a>
+            </nav>
+            <div class="version-header">v2.1.0</div>
         </div>
+    </header>
 
-        <!-- Main content area (like a crafting table GUI) -->
-        <div class="crafting-table">
-            <!-- Header with logo & title -->
-            <div class="header">
-                <div class="title-section">
-                    <div class="minecraft-icon">⛏️</div>
-                    <h1 class="game-title">WONDERLANDS</h1>
-                    <div class="title-underline"></div>
-                    <p class="subtitle">Fabric 1.21.1 • MMORPG Experience • Quality of Life</p>
+    <main class="main">
+        <!-- Hero section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">WONDERLANDS</span>
+                    <span class="title-sub">Fabric Modpack 1.21.1</span>
+                </h1>
+                <p class="hero-description">
+                    Transform Minecraft into a complete MMORPG experience. Custom classes, epic dungeons,  
+                    mythical bosses, and hundreds of quality of life features.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary" id="downloadBtn">
+                        ⬇️ Download Installer (JAR)
+                    </a>
+                    <a href="https://github.com/fabric-wonderlands/fabric-wonderlands" class="btn btn-secondary" target="_blank">
+                        View on GitHub
+                    </a>
                 </div>
-                <div class="version-badge">
-                    <span class="version-number">v2.1.0</span>
-                    <span class="minecraft-version">MC 1.21.1</span>
-                </div>
-            </div>
-
-            <!-- Hero section with installer card -->
-            <div class="hero-section">
-                <div class="installer-card">
-                    <div class="card-header">
-                        <span class="anvil-icon">🔨</span>
-                        <h2>MODPACK INSTALLER</h2>
-                        <span class="anvil-icon">🔨</span>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value">150+</span>
+                        <span class="stat-label">New Items</span>
                     </div>
-                    <div class="installer-body">
-                        <div class="file-info">
-                            <div class="file-icon">📦</div>
-                            <div class="file-details">
-                                <strong>Wonderlands-Installer.jar</strong>
-                                <span>~450 MB • Requires Fabric API</span>
-                            </div>
-                        </div>
-                        <div class="download-options">
-                            <a href="assets/installer.jar" download class="download-btn primary">
-                                ⬇️ DOWNLOAD INSTALLER
-                            </a>
-                            <a href="https://github.com/fabric-wonderlands/fabric-wonderlands/releases" class="download-btn secondary">
-                                🔄 VIEW ALL VERSIONS
-                            </a>
-                        </div>
-                        <div class="install-steps">
-                            <p class="quick-note">✨ One-click installer • Automatic Fabric setup • Mod configuration included</p>
-                        </div>
+                    <div class="stat">
+                        <span class="stat-value">25+</span>
+                        <span class="stat-label">Dungeons</span>
                     </div>
-                </div>
-
-                <!-- Stats like item tooltips -->
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-icon">⚡</div>
-                        <div class="stat-number">150+</div>
-                        <div class="stat-label">New Items</div>
+                    <div class="stat">
+                        <span class="stat-value">40+</span>
+                        <span class="stat-label">New Mobs</span>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">🏰</div>
-                        <div class="stat-number">25+</div>
-                        <div class="stat-label">Dungeons</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">👹</div>
-                        <div class="stat-number">40+</div>
-                        <div class="stat-label">New Mobs</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">✨</div>
-                        <div class="stat-number">200+</div>
-                        <div class="stat-label">QoL Features</div>
+                    <div class="stat">
+                        <span class="stat-value">200+</span>
+                        <span class="stat-label">QoL Features</span>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Features section with Minecraft item frames -->
-            <div class="features-section" id="features">
-                <h2 class="section-title">
-                    <span class="title-decoration">✦</span>
-                    FEATURES & CONTENT
-                    <span class="title-decoration">✦</span>
-                </h2>
-                
+        <!-- Features section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Features</h2>
+                    <p>Everything that makes Wonderlands unique</p>
+                </div>
                 <div class="features-grid">
-                    <div class="feature-card">
+                    <div class="feature">
                         <div class="feature-icon">🗡️</div>
                         <h3>MMORPG Classes</h3>
-                        <p>Warrior, Mage, Archer, Assassin - each with unique skill trees and ultimate abilities.</p>
+                        <p>Warrior, Mage, Archer, and Assassin. Each with unique skill trees, ultimate abilities, and progression paths.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature">
                         <div class="feature-icon">🏰</div>
-                        <h3>Procedural Dungeons</h3>
-                        <p>25+ handcrafted dungeons with unique bosses, loot tables, and legendary items.</p>
+                        <h3>Handcrafted Dungeons</h3>
+                        <p>25+ unique dungeons with custom bosses, traps, puzzles, and legendary loot tables.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature">
                         <div class="feature-icon">👹</div>
                         <h3>Mythical Creatures</h3>
-                        <p>Dragons, Griffins, Minotaurs, and 40+ new mobs with advanced AI behaviors.</p>
+                        <p>Dragons, Griffins, Minotaurs, and 40+ new mobs with advanced combat AI.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature">
                         <div class="feature-icon">⚙️</div>
                         <h3>Quality of Life</h3>
-                        <p>Backpacks, waypoints, minimap, inventory sorting, and 200+ UI improvements.</p>
+                        <p>Backpacks, minimap, waypoints, inventory sorting, JEI integration, and 200+ UI improvements.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature">
                         <div class="feature-icon">🎨</div>
-                        <h3>Visual Overhaul</h3>
-                        <p>Custom particle effects, dynamic lighting, and shader compatibility.</p>
+                        <h3>Visual Enhancements</h3>
+                        <p>Custom particle effects, dynamic lighting, and full shader compatibility.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature">
                         <div class="feature-icon">🎵</div>
                         <h3>Epic Soundtrack</h3>
-                        <p>Original MMORPG-style music for bosses, dungeons, and biomes.</p>
+                        <p>Original music for boss fights, dungeons, and special biomes.</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Dungeons & Bosses showcase -->
-            <div class="showcase-section">
-                <h2 class="section-title">
-                    <span class="title-decoration">⚔️</span>
-                    DUNGEONS & BOSSES
-                    <span class="title-decoration">⚔️</span>
-                </h2>
-                <div class="boss-grid">
-                    <div class="boss-card">
-                        <div class="boss-rarity legendary">LEGENDARY</div>
-                        <h4>Ender Dragon Reborn</h4>
+        <!-- Dungeons section -->
+        <section id="dungeons" class="dungeons">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Legendary Bosses</h2>
+                    <p>Face the mightiest creatures in Wonderlands</p>
+                </div>
+                <div class="bosses-grid">
+                    <div class="boss">
+                        <div class="boss-badge legendary">Legendary</div>
+                        <h3>Ender Dragon Reborn</h3>
                         <p>Phase 2 mechanics • 5 new attacks • Mythic drops</p>
                     </div>
-                    <div class="boss-card">
-                        <div class="boss-rarity epic">EPIC</div>
-                        <h4>Frost Giant King</h4>
+                    <div class="boss">
+                        <div class="boss-badge epic">Epic</div>
+                        <h3>Frost Giant King</h3>
                         <p>Ice cavern dungeon • Frozen relics • 4 difficulty tiers</p>
                     </div>
-                    <div class="boss-card">
-                        <div class="boss-rarity rare">RARE</div>
-                        <h4>Necromancer Lord</h4>
-                        <p>Undead army summoning • Cursed items • Soul harvest</p>
+                    <div class="boss">
+                        <div class="boss-badge rare">Rare</div>
+                        <h3>Necromancer Lord</h3>
+                        <p>Undead army • Cursed items • Soul harvest mechanic</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Installation instructions like a crafting recipe -->
-            <div class="installation-section">
-                <h2 class="section-title">
-                    <span class="title-decoration">🔧</span>
-                    INSTALLATION GUIDE
-                    <span class="title-decoration">🔧</span>
-                </h2>
-                <div class="crafting-grid">
-                    <div class="crafting-step">
+        <!-- Install section -->
+        <section id="install" class="install">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Installation</h2>
+                    <p>Get started in 4 simple steps</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
                         <div class="step-number">1</div>
                         <div class="step-content">
-                            <strong>Download Installer</strong>
-                            <p>Click the download button above to get Wonderlands-Installer.jar</p>
+                            <h3>Download Installer</h3>
+                            <p>Get Wonderlands-Installer.jar from the button above</p>
                         </div>
                     </div>
-                    <div class="crafting-step">
+                    <div class="step">
                         <div class="step-number">2</div>
                         <div class="step-content">
-                            <strong>Run the JAR file</strong>
-                            <p>Double-click to launch the installer (requires Java 17+)</p>
+                            <h3>Run the JAR</h3>
+                            <p>Double-click to launch (requires Java 17+)</p>
                         </div>
                     </div>
-                    <div class="crafting-step">
+                    <div class="step">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                            <strong>Select Minecraft Directory</strong>
-                            <p>Choose your .minecraft folder (auto-detected)</p>
+                            <h3>Select Minecraft Folder</h3>
+                            <p>Choose your .minecraft directory (auto-detected)</p>
                         </div>
                     </div>
-                    <div class="crafting-step">
+                    <div class="step">
                         <div class="step-number">4</div>
                         <div class="step-content">
-                            <strong>Launch & Play!</strong>
+                            <h3>Launch & Play</h3>
                             <p>Select "Wonderlands" profile in Minecraft Launcher</p>
                         </div>
                     </div>
                 </div>
-                <div class="requirements-note">
-                    <span>📋 Requires: Fabric 0.15.11+ • Java 17 • 4GB RAM minimum</span>
+                <div class="requirements">
+                    <strong>Requirements:</strong> Fabric 0.15.11+ • Java 17 • 4GB RAM minimum • Minecraft 1.21.1
                 </div>
             </div>
+        </section>
+    </main>
 
-            <!-- Footer like game credits -->
-            <div class="footer">
-                <div class="social-links">
-                    <a href="https://github.com/fabric-wonderlands">🐙 GitHub</a>
-                    <a href="#">💬 Discord</a>
-                    <a href="#">🐦 Twitter</a>
-                    <a href="#">📚 Wiki</a>
-                </div>
-                <div class="credits">
-                    <p>Wonderlands Modpack © 2025 | Created by fabric-wonderlands</p>
-                    <p>Licensed under MIT | Fabric mods by the community</p>
-                </div>
-            </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Wonderlands Modpack © 2025 • Created by fabric-wonderlands</p>
+            <p>Licensed under MIT • Built for Fabric 1.21.1</p>
         </div>
-    </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
