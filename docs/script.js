@@ -37,11 +37,14 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Download button
+// Download button - Discord CDN redirect
 document.getElementById('downloadBtn')?.addEventListener('click', (e) => {
     e.preventDefault();
-    // Replace with actual download URL
-    const downloadUrl = 'assets/installer.jar';
+    
+    // REPLACE THIS URL with your actual Discord CDN link
+    const downloadUrl = 'https://cdn.discordapp.com/attachments/YOUR_CHANNEL_ID/YOUR_FILE_ID/Wonderlands-Installer.jar';
+    
+    // Create hidden link and trigger download
     const link = document.createElement('a');
     link.href = downloadUrl;
     link.download = 'Wonderlands-Installer.jar';
@@ -50,8 +53,28 @@ document.getElementById('downloadBtn')?.addEventListener('click', (e) => {
     document.body.removeChild(link);
     
     // Show notification
-    showNotification('Download started! Check your downloads folder.');
+    showNotification('Download started! (~45 MB)');
 });
+
+// Simple notification function (add this if not present)
+function showNotification(message) {
+    const notif = document.createElement('div');
+    notif.textContent = message;
+    notif.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-size: 14px;
+        z-index: 1000;
+        animation: fadeInOut 3s ease;
+    `;
+    document.body.appendChild(notif);
+    setTimeout(() => notif.remove(), 3000);
+}
 
 // Simple notification
 function showNotification(message) {
